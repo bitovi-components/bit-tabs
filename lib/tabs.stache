@@ -1,0 +1,9 @@
+<ul>
+  {{#panels}}
+    <li {{#isActive}}class='active'{{/isActive}} 
+    	can-click='makeActive'>
+		  {{title}}
+	</li>
+  {{/panels}}
+</ul>
+<content></content>
