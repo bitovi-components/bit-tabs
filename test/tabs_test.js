@@ -22,5 +22,5 @@ QUnit.module("can-tabs component",{
 });
 
 QUnit.test("basics", function(){
-	QUnit.equal( $("can-tabs ul li").text(),"First", "has text");
+	QUnit.equal( $.trim( $("can-tabs ul li").text() ),"First", "has text");
 });
