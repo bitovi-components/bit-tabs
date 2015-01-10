@@ -1,7 +1,7 @@
-slider
+Tabs
 ======
 
-A slider project that is usable to:
+A tabs project that is usable to:
 
 - npm / browserify
 - StealJS + ES6

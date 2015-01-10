@@ -2,12 +2,15 @@
   "name": "can-tabs",
   "version": "0.0.1",
   "description": "",
-  "main": "lib/can-tabs.js",
+  "main": "dist/cjs/lib/can-tabs",
+  "browser": {
+  	"can/view/stache/stache": "can/dist/cjs/view/stache/stache"
+  },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "dependencies": {
-    "can": "bitovi/canjs#autorender"
+    "can": "bitovi/canjs#browserify-cjs"
   },
   "devDependencies": {
     "steal": "bitovi/steal#npm",
@@ -17,6 +20,8 @@
     "steal-qunit" : "bitovi/steal-qunit#master"
   },
   "system": {
+  	"main": "lib/can-tabs",
+  	"ignoreBrowser": true,
     "npmIgnore" : {
       "steal": true,
       "steal-tools": true,
