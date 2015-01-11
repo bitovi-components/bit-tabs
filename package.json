@@ -1,6 +1,6 @@
 {
   "name": "can-tabs",
-  "version": "0.0.1",
+  "version": "0.0.1-pre.0",
   "description": "",
   "main": "dist/cjs/lib/can-tabs",
   "browser": {
