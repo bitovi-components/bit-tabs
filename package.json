@@ -4,7 +4,7 @@
   "description": "",
   "main": "dist/cjs/lib/can-tabs",
   "browser": {
-  	"can/view/stache/stache": "can/dist/cjs/view/stache/stache"
+    "can/view/stache/stache": "can/dist/cjs/view/stache/stache"
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -20,8 +20,8 @@
     "steal-qunit" : "bitovi/steal-qunit#master"
   },
   "system": {
-  	"main": "lib/can-tabs",
-  	"ignoreBrowser": true,
+    "main": "lib/can-tabs",
+    "ignoreBrowser": true,
     "npmIgnore" : {
       "steal": true,
       "steal-tools": true,
