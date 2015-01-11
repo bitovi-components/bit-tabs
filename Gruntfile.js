@@ -1,5 +1,6 @@
 var path = require("path");
 var toCJS = require("steal-tools/lib/build/helpers/cjs");
+var toStandalone = require("steal-tools/lib/build/helpers/standalone");
 
 module.exports = function (grunt) {
 
@@ -12,7 +13,9 @@ module.exports = function (grunt) {
 					config: "package.json!npm"
 				},
 				outputs: {
-					"cjs": toCJS()
+					"cjs": toCJS(),
+					"standalone js": toStandalone.js(),
+					"standalone css": toStandalone.css()
 				}
 			}
 		}
