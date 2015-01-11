@@ -69,7 +69,6 @@ export var CanTabsVM = can.Map.extend({
 	}
 });
 
-
 can.Component.extend({
 	tag: "can-tabs",
 	template: tabsStache,

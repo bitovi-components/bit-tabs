@@ -2,9 +2,8 @@
   "name": "can-tabs",
   "version": "0.0.1-pre.0",
   "description": "",
-  "main": "dist/cjs/lib/can-tabs",
+  "main": "lib/can-tabs",
   "browser": {
-    "can/view/stache/stache": "can/dist/cjs/view/stache/stache",
     "transform": [ "cssify" ]
   },
   "scripts": {
@@ -23,8 +22,9 @@
     "cssify": "^0.6.0"
   },
   "system": {
-    "main": "lib/can-tabs",
-    "ignoreBrowser": true,
+    "directories" : {
+      "lib": "src"
+    },
     "npmIgnore" : {
       "steal": true,
       "steal-tools": true,
