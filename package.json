@@ -4,7 +4,8 @@
   "description": "",
   "main": "dist/cjs/lib/can-tabs",
   "browser": {
-    "can/view/stache/stache": "can/dist/cjs/view/stache/stache"
+    "can/view/stache/stache": "can/dist/cjs/view/stache/stache",
+    "transform": [ "cssify" ]
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -17,7 +18,9 @@
     "steal-tools": "bitovi/steal-tools#npm",
     "bower": "1.3.8",
     "grunt": "~0.4.1",
-    "steal-qunit" : "bitovi/steal-qunit#master"
+    "steal-qunit" : "bitovi/steal-qunit#master",
+    "jquery": ">1.9.0",
+    "cssify": "^0.6.0"
   },
   "system": {
     "main": "lib/can-tabs",
