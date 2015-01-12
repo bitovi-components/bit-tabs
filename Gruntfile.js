@@ -18,7 +18,7 @@ module.exports = function (grunt) {
 				options: {
 					browsers: ['chrome']
 				},
-				src: ['test/test.html']
+				src: ['src/test/test.html']
 			},
 			ci: {
 				options: {
