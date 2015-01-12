@@ -24,7 +24,7 @@ module.exports = function (grunt) {
 				options: {
 					browsers: ['firefox']
 				},
-				src: ['test/test.html']
+				src: ['src/test/test.html']
 			}
 		},
 		stealPluginify: {
