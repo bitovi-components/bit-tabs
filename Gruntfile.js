@@ -41,6 +41,6 @@ module.exports = function (grunt) {
 			}
 		}
 	});
-
+	grunt.registerTask('build',['stealPluginify']);
 	grunt.registerTask('test', [ isCI ? 'testee:ci' : 'testee:local' ]);
 };

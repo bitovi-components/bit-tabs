@@ -10,11 +10,11 @@
     "test": "grunt test --stack"
   },
   "dependencies": {
-    "can": "bitovi/canjs#srced"
+    "canjs": "bitovi/canjs#srced-canjs",
+    "cssify": "^0.6.0"
   },
   "devDependencies": {
     "bower": "1.3.8",
-    "cssify": "^0.6.0",
     "grunt": "~0.4.1",
     "grunt-cli": "^0.1.13",
     "jquery": ">1.9.0",
