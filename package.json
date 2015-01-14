@@ -1,16 +1,19 @@
 {
   "name": "can-tabs",
-  "version": "0.0.1-pre.0",
+  "version": "0.0.1-alpha.2",
   "description": "",
   "main": "lib/can-tabs",
   "browser": {
     "transform": [ "cssify" ]
   },
+  "browserify": {
+    "transform": ["cssify"]
+  },
   "scripts": {
     "test": "grunt test --stack"
   },
   "dependencies": {
-    "canjs": "bitovi/canjs#srced-canjs",
+    "canjs": "2.2.0-alpha.4",
     "cssify": "^0.6.0"
   },
   "devDependencies": {
