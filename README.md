@@ -115,7 +115,9 @@ define(["can", "jquery", "can/view/stache","can-tabs"], function(can, $){
 Load the `global` css and js files:
 
 ```html
-<link rel="stylesheet" type="text/css" href="./node_modules/can-tabs/dist/global/can-tabs.css">
+<link rel="stylesheet" type="text/css" 
+      href="./node_modules/can-tabs/dist/global/can-tabs.css">
+      
 <script src='./node_modules/jquery/dist/jquery.js'></script>
 <script src='./node_modules/canjs/dist/can.jquery.js'></script>
 <script src='./node_modules/canjs/dist/can.stache.js'></script>
