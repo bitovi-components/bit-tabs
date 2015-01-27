@@ -1,6 +1,6 @@
 {
   "name": "can-tabs",
-  "version": "0.0.1-alpha.8",
+  "version": "0.0.1-alpha.9",
   "description": "",
   "main": "lib/can-tabs",
   "browser": {
@@ -13,7 +13,7 @@
     "test": "grunt test --stack"
   },
   "dependencies": {
-    "canjs": "2.2.0-alpha.7",
+    "canjs": "2.2.0-alpha.8",
     "cssify": "^0.6.0"
   },
   "devDependencies": {
@@ -22,7 +22,7 @@
     "grunt-cli": "^0.1.13",
     "jquery": ">1.9.0",
     "steal": "0.5.0-pre.3",
-    "steal-tools": "0.5.0-pre.7",
+    "steal-tools": "0.5.0-pre.8",
     "steal-qunit": "0.0.2",
     "testee": "^0.1.8"
   },
