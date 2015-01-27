@@ -125,7 +125,7 @@ Load the `global` css and js files:
 <script id='main-stache' text='text/stache'>
   <can-tabs>
 	<can-panel title='X'>X Content</can-panel>
-	<can-panel title='Y'> Y-Content</can-panel>
+	<can-panel title='Y'>Y-Content</can-panel>
   </can-tabs>
 </script>
 <script>

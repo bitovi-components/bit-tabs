@@ -1,6 +1,6 @@
 {
   "name": "can-tabs",
-  "version": "0.0.1-alpha.7",
+  "version": "0.0.1-alpha.8",
   "description": "",
   "main": "lib/can-tabs",
   "browser": {
@@ -22,7 +22,7 @@
     "grunt-cli": "^0.1.13",
     "jquery": ">1.9.0",
     "steal": "0.5.0-pre.3",
-    "steal-tools": "0.5.0-pre.6",
+    "steal-tools": "0.5.0-pre.7",
     "steal-qunit": "0.0.2",
     "testee": "^0.1.8"
   },
