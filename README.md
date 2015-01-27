@@ -1,4 +1,4 @@
-## can-tabss
+## can-tabs
 
 [![Build Status](https://travis-ci.org/bitovi-components/can-tabs.svg?branch=master)](https://travis-ci.org/bitovi-components/can-tabs)
 
@@ -14,7 +14,7 @@ A tabs widget that can be loaded by:
 
 With StealJS, you can import this module directly in a template that is autorendered:
 
-```
+```html
 <script type='text/stache' can-autorender>
 	<can-import from="can-tabs"/>
 	
@@ -34,7 +34,7 @@ With StealJS, you can import this module directly in a template that is autorend
 
 Alternatively, you can import this module like:
 
-```
+```js
 import "can-tabs";
 import can from "can";
 import $ from "jquery";
@@ -56,7 +56,7 @@ $("body").append(template());
 Use `require` to load `can-tabs` and everything else
 needed to create a template that uses `can-tabs`:
 
-```
+```js
 var can = require("canjs");
 var $ = require("jquery");
 
@@ -79,7 +79,7 @@ $("body").append(template());
 
 Configure the `can` and `jquery` paths and the `can-tabs` package:
 
-```
+```html
 <script src="require.js"></script>
 <script>
 	require.config({
@@ -99,7 +99,7 @@ Configure the `can` and `jquery` paths and the `can-tabs` package:
 
 Use can-tabs like:
 
-```
+```js
 define(["can", "jquery", "can/view/stache","can-tabs"], function(can, $){
 	var template = can.stache("<can-tabs>"+
 		"<can-panel title='X'>X Content</can-panel>"+
@@ -114,7 +114,7 @@ define(["can", "jquery", "can/view/stache","can-tabs"], function(can, $){
 
 Load the `global` css and js files:
 
-```
+```html
 <link rel="stylesheet" type="text/css" href="./node_modules/can-tabs/dist/global/can-tabs.css">
 <script src='./node_modules/jquery/dist/jquery.js'></script>
 <script src='./node_modules/canjs/dist/can.jquery.js'></script>
