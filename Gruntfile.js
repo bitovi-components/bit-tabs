@@ -24,7 +24,7 @@ module.exports = function (grunt) {
 				src: ['src/test/test.html']
 			}
 		},
-		stealPluginify: {
+		"steal-export": {
 			dist: {
 				system: {
 					config: "package.json!npm"
@@ -38,6 +38,6 @@ module.exports = function (grunt) {
 			}
 		}
 	});
-	grunt.registerTask('build',['stealPluginify']);
+	grunt.registerTask('build',['steal-export']);
 	grunt.registerTask('test', [ isCI ? 'testee:ci' : 'testee:local' ]);
 };

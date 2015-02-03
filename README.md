@@ -97,6 +97,8 @@ Configure the `can` and `jquery` paths and the `can-tabs` package:
 </script>
 ```
 
+Make sure you have the `css` plugin configured also!
+
 Use can-tabs like:
 
 ```js
