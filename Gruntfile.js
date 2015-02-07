@@ -15,13 +15,13 @@ module.exports = function (grunt) {
 				options: {
 					browsers: ['chrome']
 				},
-				src: ['src/test/test.html']
+				src: ['test/test.html']
 			},
 			ci: {
 				options: {
 					browsers: ['firefox']
 				},
-				src: ['src/test/test.html']
+				src: ['test/test.html']
 			}
 		},
 		"steal-export": {

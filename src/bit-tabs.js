@@ -70,7 +70,7 @@ export var CanTabsVM = can.Map.extend({
 });
 
 can.Component.extend({
-	tag: "can-tabs",
+	tag: "bit-tabs",
 	template: tabsStache,
 	scope: CanTabsVM
 });

@@ -1,6 +1,6 @@
-## can-tabs
+## bit-tabs
 
-[![Build Status](https://travis-ci.org/bitovi-components/can-tabs.svg?branch=master)](https://travis-ci.org/bitovi-components/can-tabs)
+[![Build Status](https://travis-ci.org/bitovi-components/bit-tabs.svg?branch=master)](https://travis-ci.org/bitovi-components/bit-tabs)
 
 A tabs widget that can be loaded by:
 
@@ -16,16 +16,16 @@ With StealJS, you can import this module directly in a template that is autorend
 
 ```html
 <script type='text/stache' can-autorender>
-	<can-import from="can-tabs"/>
+	<can-import from="bit-tabs"/>
 	
-	<can-tabs>
+	<bit-tabs>
 	    <can-panel title="CanJS">
 	      CanJS provides the MV*
 	    </can-panel>
 	    <can-panel title="StealJS">
 	      StealJS provides the infrastructure.
 	    </can-panel>
-  	</can-tabs>
+  	</bit-tabs>
 </script>
 
 <script src='./node_modules/steal/steal.js'
@@ -35,16 +35,16 @@ With StealJS, you can import this module directly in a template that is autorend
 Alternatively, you can import this module like:
 
 ```js
-import "can-tabs";
+import "bit-tabs";
 import can from "can";
 import $ from "jquery";
 import stache from "can/view/stache/stache";
 
 
-var template = stache("<can-tabs>"+
+var template = stache("<bit-tabs>"+
 	"<can-panel title='X'>X Content</can-panel>"+
 	"<can-panel title='Y'> Y-Content</can-panel>"+
-"</can-tabs>");
+"</bit-tabs>");
 
 $("body").append(template());
 
@@ -53,23 +53,23 @@ $("body").append(template());
 
 ## CJS use
 
-Use `require` to load `can-tabs` and everything else
-needed to create a template that uses `can-tabs`:
+Use `require` to load `bit-tabs` and everything else
+needed to create a template that uses `bit-tabs`:
 
 ```js
 var can = require("canjs");
 var $ = require("jquery");
 
-// Add's can-tabs tag
-require("can-tabs");
+// Add's bit-tabs tag
+require("bit-tabs");
 // Use stache
 require("canjs/view/stache/stache");
 
 
-var template = can.stache("<can-tabs>"+
+var template = can.stache("<bit-tabs>"+
 	"<can-panel title='X'>X Content</can-panel>"+
 	"<can-panel title='Y'> Y-Content</can-panel>"+
-"</can-tabs>");
+"</bit-tabs>");
 
 $("body").append(template());
 
@@ -77,7 +77,7 @@ $("body").append(template());
 
 ## AMD use
 
-Configure the `can` and `jquery` paths and the `can-tabs` package:
+Configure the `can` and `jquery` paths and the `bit-tabs` package:
 
 ```html
 <script src="require.js"></script>
@@ -88,9 +88,9 @@ Configure the `can` and `jquery` paths and the `can-tabs` package:
 	        "can": "node_modules/canjs/dist/amd/can"
 	    },
 	    packages: [{
-		    	name: 'can-tabs',
-		    	location: 'node_modules/can-tabs/dist/amd',
-		    	main: 'lib/can-tabs'
+		    	name: 'bit-tabs',
+		    	location: 'node_modules/bit-tabs/dist/amd',
+		    	main: 'lib/bit-tabs'
 	    }]
 	});
 	require(["main-amd"], function(){});
@@ -99,14 +99,14 @@ Configure the `can` and `jquery` paths and the `can-tabs` package:
 
 Make sure you have the `css` plugin configured also!
 
-Use can-tabs like:
+Use bit-tabs like:
 
 ```js
-define(["can", "jquery", "can/view/stache","can-tabs"], function(can, $){
-	var template = can.stache("<can-tabs>"+
+define(["can", "jquery", "can/view/stache","bit-tabs"], function(can, $){
+	var template = can.stache("<bit-tabs>"+
 		"<can-panel title='X'>X Content</can-panel>"+
 		"<can-panel title='Y'> Y-Content</can-panel>"+
-	"</can-tabs>");
+	"</bit-tabs>");
 
 	$("body").append(template());
 });
@@ -118,17 +118,17 @@ Load the `global` css and js files:
 
 ```html
 <link rel="stylesheet" type="text/css" 
-      href="./node_modules/can-tabs/dist/global/can-tabs.css">
+      href="./node_modules/bit-tabs/dist/global/bit-tabs.css">
       
 <script src='./node_modules/jquery/dist/jquery.js'></script>
 <script src='./node_modules/canjs/dist/can.jquery.js'></script>
 <script src='./node_modules/canjs/dist/can.stache.js'></script>
-<script src='./node_modules/can-tabs/dist/global/can-tabs.js'></script>
+<script src='./node_modules/bit-tabs/dist/global/bit-tabs.js'></script>
 <script id='main-stache' text='text/stache'>
-  <can-tabs>
+  <bit-tabs>
 	<can-panel title='X'>X Content</can-panel>
 	<can-panel title='Y'>Y-Content</can-panel>
-  </can-tabs>
+  </bit-tabs>
 </script>
 <script>
   $("body").append( can.view("main-stache",{}) );

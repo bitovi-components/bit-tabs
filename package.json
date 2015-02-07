@@ -1,8 +1,8 @@
 {
-  "name": "can-tabs",
-  "version": "0.0.1-alpha.10",
+  "name": "bit-tabs",
+  "version": "0.0.2-pre.0",
   "description": "",
-  "main": "dist/cjs/lib/can-tabs",
+  "main": "dist/cjs/lib/bit-tabs",
   "browser": {
     "transform": [ "cssify" ]
   },
@@ -28,12 +28,12 @@
     "testee": "^0.1.8"
   },
   "system": {
-    "main": "src/can-tabs",
+    "main": "src/bit-tabs",
     "npmIgnore": ["testee","cssify"]
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/bitovi-components/can-tabs"
+    "url": "https://github.com/bitovi-components/bit-tabs"
   },
   "keywords": [
     "CanJS",
@@ -43,7 +43,7 @@
   "author": "Bitovi",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/bitovi-components/can-tabs/issues"
+    "url": "https://github.com/bitovi-components/bit-tabs/issues"
   },
-  "homepage": "https://github.com/bitovi-components/can-tabs"
+  "homepage": "https://github.com/bitovi-components/bit-tabs"
 }
