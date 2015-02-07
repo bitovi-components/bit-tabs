@@ -2,7 +2,7 @@
   "name": "can-tabs",
   "version": "0.0.1-alpha.10",
   "description": "",
-  "main": "lib/can-tabs",
+  "main": "dist/cjs/lib/can-tabs",
   "browser": {
     "transform": [ "cssify" ]
   },
@@ -14,7 +14,7 @@
     "prepublish": "./node_modules/.bin/grunt build"
   },
   "dependencies": {
-    "canjs": "2.2.0-alpha.9",
+    "can": "2.2.0-alpha.10",
     "cssify": "^0.6.0"
   },
   "devDependencies": {
@@ -28,9 +28,7 @@
     "testee": "^0.1.8"
   },
   "system": {
-    "directories" : {
-      "lib": "src"
-    },
+    "main": "src/can-tabs",
     "npmIgnore": ["testee","cssify"]
   },
   "repository": {

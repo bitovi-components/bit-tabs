@@ -30,7 +30,7 @@ module.exports = function (grunt) {
 					config: "package.json!npm"
 				},
 				outputs: {
-					"+cjs": {dest: __dirname},
+					"+cjs": {},
 					"+amd": {},
 					"+global-js": {},
 					"+global-css": {}
