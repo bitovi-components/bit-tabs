@@ -1,6 +1,6 @@
 {
   "name": "bit-tabs",
-  "version": "0.0.2-pre.4",
+  "version": "0.0.2-pre.5",
   "description": "",
   "main": "dist/cjs/bit-tabs",
   "browser": {
@@ -14,7 +14,7 @@
     "prepublish": "./node_modules/.bin/grunt build"
   },
   "dependencies": {
-    "can": "2.2.0-alpha.10",
+    "can": "bitovi/canjs#master",
     "cssify": "^0.6.0"
   },
   "devDependencies": {
@@ -22,8 +22,8 @@
     "grunt": "~0.4.1",
     "grunt-cli": "^0.1.13",
     "jquery": ">1.9.0",
-    "steal": "0.6.0-pre.0",
-    "steal-tools": "0.6.0-pre.3",
+    "steal": "^0.7.1",
+    "steal-tools": "^0.7.1",
     "steal-qunit": "0.0.2",
     "testee": "^0.1.8"
   },

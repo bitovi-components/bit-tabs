@@ -27,7 +27,7 @@ module.exports = function (grunt) {
 		"steal-export": {
 			dist: {
 				system: {
-					configMain: "package.json!npm"
+					config: "package.json!npm"
 				},
 				outputs: {
 					"+cjs": {},
