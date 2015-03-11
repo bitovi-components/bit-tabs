@@ -1,8 +1,8 @@
 {
   "name": "bit-tabs",
-  "version": "0.0.2-pre.0",
+  "version": "0.0.2-pre.3",
   "description": "",
-  "main": "dist/cjs/lib/bit-tabs",
+  "main": "dist/cjs/bit-tabs",
   "browser": {
     "transform": [ "cssify" ]
   },
@@ -28,8 +28,12 @@
     "testee": "^0.1.8"
   },
   "system": {
-    "main": "src/bit-tabs",
-    "npmIgnore": ["testee","cssify"]
+    "main": "bit-tabs",
+    "npmIgnore": ["testee","cssify"],
+    "directories": {
+      "lib": "src"
+    },
+    "transpiler": "babel"
   },
   "repository": {
     "type": "git",
