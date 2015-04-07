@@ -5,14 +5,14 @@ import tabsStache from "./tabs.stache!";
 import panelStache from "./panel.stache!";
 import "./tabs.less!";
 
-export var CanPanelVM = can.Map.extend({
+export var BitPanelVM = can.Map.extend({
 	active: false
 });
 
 can.Component.extend({
-	tag:"can-panel",
+	tag:"bit-panel",
 	template: panelStache,
-	scope: CanPanelVM,
+	scope: BitPanelVM,
 	events: {
 		inserted: function(){
 			this.element.parent().scope().addPanel( this.scope );
@@ -23,7 +23,7 @@ can.Component.extend({
 	}
 });
 
-export var CanTabsVM = can.Map.extend({
+export var BitTabsVM = can.Map.extend({
 	// Contains a list of all panel scopes within the
 	// tabs element.
 	panels: [],
@@ -72,7 +72,7 @@ export var CanTabsVM = can.Map.extend({
 can.Component.extend({
 	tag: "bit-tabs",
 	template: tabsStache,
-	scope: CanTabsVM
+	scope: BitTabsVM
 });
 
 

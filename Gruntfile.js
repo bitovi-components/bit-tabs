@@ -29,6 +29,9 @@ module.exports = function (grunt) {
 				system: {
 					config: "package.json!npm"
 				},
+				options: {
+					sourceMaps: true
+				},
 				outputs: {
 					"+cjs": {},
 					"+amd": {},

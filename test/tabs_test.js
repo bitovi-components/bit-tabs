@@ -1,19 +1,19 @@
 import QUnit from "steal-qunit";
-import {CanPanelVM, CanTabsVM} from "bit-tabs";
+import {BitPanelVM, BitTabsVM} from "bit-tabs";
 import can from "can";
 import $ from "jquery";
 
 QUnit.module("bit-tabs view model");
 
 QUnit.test("basics", function(){
-	var tabsVM = new CanTabsVM();
-	var panelVM = new CanPanelVM();
+	var tabsVM = new BitTabsVM();
+	var panelVM = new BitPanelVM();
 	tabsVM.addPanel(panelVM);
 	
 	equal(panelVM.attr("active"), true, "first panel added is active");
 });
 
-var template = can.stache("<bit-tabs><can-panel title='First'>Hello!</can-panel></bit-tabs>");
+var template = can.stache("<bit-tabs><bit-panel title='First'>Hello!</bit-panel></bit-tabs>");
 
 QUnit.module("bit-tabs component",{
 	setup: function(){
