@@ -19,12 +19,12 @@ With StealJS, you can import this module directly in a template that is autorend
 	<can-import from="bit-tabs"/>
 	
 	<bit-tabs>
-	    <can-panel title="CanJS">
+	    <bit-panel title="CanJS">
 	      CanJS provides the MV*
-	    </can-panel>
-	    <can-panel title="StealJS">
+	    </bit-panel>
+	    <bit-panel title="StealJS">
 	      StealJS provides the infrastructure.
-	    </can-panel>
+	    </bit-panel>
   	</bit-tabs>
 </script>
 
@@ -42,8 +42,8 @@ import stache from "can/view/stache/stache";
 
 
 var template = stache("<bit-tabs>"+
-	"<can-panel title='X'>X Content</can-panel>"+
-	"<can-panel title='Y'> Y-Content</can-panel>"+
+	"<bit-panel title='X'>X Content</bit-panel>"+
+	"<bit-panel title='Y'> Y-Content</bit-panel>"+
 "</bit-tabs>");
 
 $("body").append(template());
@@ -67,8 +67,8 @@ require("canjs/view/stache/stache");
 
 
 var template = can.stache("<bit-tabs>"+
-	"<can-panel title='X'>X Content</can-panel>"+
-	"<can-panel title='Y'> Y-Content</can-panel>"+
+	"<bit-panel title='X'>X Content</bit-panel>"+
+	"<bit-panel title='Y'> Y-Content</bit-panel>"+
 "</bit-tabs>");
 
 $("body").append(template());
@@ -104,8 +104,8 @@ Use bit-tabs like:
 ```js
 define(["can", "jquery", "can/view/stache","bit-tabs"], function(can, $){
 	var template = can.stache("<bit-tabs>"+
-		"<can-panel title='X'>X Content</can-panel>"+
-		"<can-panel title='Y'> Y-Content</can-panel>"+
+		"<bit-panel title='X'>X Content</bit-panel>"+
+		"<bit-panel title='Y'> Y-Content</bit-panel>"+
 	"</bit-tabs>");
 
 	$("body").append(template());
@@ -126,8 +126,8 @@ Load the `global` css and js files:
 <script src='./node_modules/bit-tabs/dist/global/bit-tabs.js'></script>
 <script id='main-stache' text='text/stache'>
   <bit-tabs>
-	<can-panel title='X'>X Content</can-panel>
-	<can-panel title='Y'>Y-Content</can-panel>
+    <bit-panel title='X'>X Content</bit-panel>
+    <bit-panel title='Y'>Y-Content</bit-panel>
   </bit-tabs>
 </script>
 <script>
