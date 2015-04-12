@@ -27,6 +27,9 @@ export var BitTabsVM = can.Map.extend({
 	// Contains a list of all panel scopes within the
 	// tabs element.
 	panels: [],
+	// The tabsClass gets set up as the class attribute on the ul
+	// containing the tabs.
+	tabsClass:"",
 	// When a `<panel>` element is inserted into the document,
 	// it calls this method to add the panel's scope to the
 	// panels array.
@@ -34,7 +37,7 @@ export var BitTabsVM = can.Map.extend({
 		// If this is the first panel, activate it.
 		if( this.attr("panels").length === 0 ) {
 			this.makeActive(panel);
-		} 
+		}
 		this.attr("panels").push(panel);
 	},
 	// When a `<panel>` element is removed from the document,
@@ -49,23 +52,23 @@ export var BitTabsVM = can.Map.extend({
 			if(panels.length){
 				this.makeActive(panels[0]);
 			} else {
-				this.removeAttr("active")
+				this.removeAttr("active");
 			}
 		}
-		can.batch.stop()
+		can.batch.stop();
 	},
 	makeActive: function(panel){
 		this.attr("active",panel);
 		this.attr("panels").each(function(panel){
-			panel.attr("active", false)
+			panel.attr("active", false);
 		});
 		panel.attr("active",true);
-		
+
 	},
 	// this is scope, not mustache
 	// consider removing scope as arg
 	isActive: function( panel ) {
-		return this.attr('active') == panel;
+		return this.attr("active") === panel;
 	}
 });
 

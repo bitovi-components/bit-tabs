@@ -1,3 +1,5 @@
+"use strict";
+
 import QUnit from "steal-qunit";
 import {BitPanelVM, BitTabsVM} from "bit-tabs";
 import can from "can";
@@ -12,11 +14,11 @@ QUnit.test("basics", function(){
 	var tabsVM = new BitTabsVM();
 	var panelVM = new BitPanelVM();
 	tabsVM.addPanel(panelVM);
-	
+
 	equal(panelVM.attr("active"), true, "first panel added is active");
 });
 
-var template = can.stache("<bit-tabs><bit-panel title='First'>Hello!</bit-panel><bit-panel title='Second'>Another</bit-panel></bit-tabs>");
+var template = can.stache("<bit-tabs tabs-class='nav nav-tabs'><bit-panel title='First'>Hello!</bit-panel><bit-panel title='Second'>Another</bit-panel></bit-tabs>");
 
 QUnit.module("bit-tabs component",{
 	setup: function(){
@@ -26,6 +28,7 @@ QUnit.module("bit-tabs component",{
 
 QUnit.test("basics", function(){
   F("bit-tabs ul li").text(/First/, "has text");
+	equal(F("bit-tabs ul")[0].className, "nav nav-tabs", "tabsClass gets assigned to ul");
 });
 
 QUnit.test("clicking works", function(){
