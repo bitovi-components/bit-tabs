@@ -1,6 +1,6 @@
-<ul>
+<ul class="{{tabsClass}}">
   {{#panels}}
-    <li {{#isActive}}class='active'{{/isActive}} 
+    <li {{#isActive}}class='active'{{/isActive}}
     	can-click='makeActive'>
 		  {{title}}
 	</li>
