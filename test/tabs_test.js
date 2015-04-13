@@ -1,5 +1,3 @@
-"use strict";
-
 import QUnit from "steal-qunit";
 import {BitPanelVM, BitTabsVM} from "bit-tabs";
 import can from "can";
@@ -28,7 +26,7 @@ QUnit.module("bit-tabs component",{
 
 QUnit.test("basics", function(){
   F("bit-tabs ul li").text(/First/, "has text");
-	equal(F("bit-tabs ul")[0].className, "nav nav-tabs", "tabsClass gets assigned to ul");
+  F("bit-tabs ul").hasClass("nav", true).hasClass("nav-tabs", true, "tabsClass gets assigned to ul");
 });
 
 QUnit.test("clicking works", function(){
