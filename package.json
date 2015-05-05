@@ -18,7 +18,7 @@
     "prepublish": "./node_modules/.bin/grunt build"
   },
   "dependencies": {
-    "can": "^2.2.1",
+    "can": "git://github.com/bitovi/canjs.git#place-my-order2",
     "cssify": "^0.6.0"
   },
   "devDependencies": {
