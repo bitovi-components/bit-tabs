@@ -2,7 +2,7 @@
   {{#panels}}
     <li {{#isActive}}class='active'{{/isActive}}
     	can-click='makeActive'>
-		  {{title}}
+		  <a href="javascript://">{{title}}</a>
 	</li>
   {{/panels}}
 </ul>
