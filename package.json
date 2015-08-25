@@ -1,6 +1,6 @@
 {
   "name": "bit-tabs",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "",
   "main": "dist/cjs/bit-tabs",
   "browser": {
