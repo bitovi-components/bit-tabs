@@ -5,7 +5,7 @@ module.exports = function (grunt) {
 
 	grunt.loadNpmTasks('steal-tools');
 	grunt.loadNpmTasks('testee');
-	
+
 	grunt.initConfig({
 		testee: {
 			options: {
@@ -13,7 +13,7 @@ module.exports = function (grunt) {
 			},
 			local: {
 				options: {
-					browsers: ['chrome']
+					browsers: ['firefox']
 				},
 				src: ['test/test.html']
 			},
