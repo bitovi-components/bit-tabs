@@ -1,6 +1,6 @@
 {
   "name": "bit-tabs",
-  "version": "0.1.3",
+  "version": "0.2.0",
   "description": "A tabs can.Component; allows switching between one of many panels using a tabs interface.",
   "main": "dist/cjs/bit-tabs",
   "browser": {
