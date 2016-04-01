@@ -1,27 +1,37 @@
 bit-tabs {
 	margin-top: 20px;
-	button {clear: both;}
-	ul {
-	    padding: 0px; margin: 0px;
+
+	> ul {
+		display: inline-block;
+		padding: 0px;
+		margin: 0px;
+
+		&:after {
+			content: ".";
+			display: block;
+			height: 1px;
+			clear: both; 
+			visibility: hidden;
+		}
+
+		li {
+			float: left;
+			padding: 10px;
+			background-color: #F6F6F6;
+			list-style: none;
+			margin-left: 10px;
+			color: #1C94C4;
+			font-weight: bold;
+			text-decoration: none;
+
+			&.active {
+				color: #F6A828;
+				cursor: default;
+			}
+		}
 	}
-	ul:after  { content: "."; display: block; height: 1px; clear: both; visibility: hidden; }
-	ul { display: inline-block; }
-	li {
-	    float: left;
-	    padding: 10px;
-	    background-color: #F6F6F6;
-	    list-style: none;
-	    margin-left: 10px;
-	    color: #1C94C4;
-	    font-weight: bold;
-	    text-decoration: none;
-	}
-	li.active {
-	    color: #F6A828;
-	    cursor: default;
-	}
-	bit-panel {
-	    clear: both;
-	    display: block;
+	> bit-panel {
+		clear: both;
+		display: block;
 	}
 }
