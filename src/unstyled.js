@@ -1,28 +1,32 @@
-import can from "can";
-import stache from "can/view/stache/";
+import CanMap from "can-map";
+import "can-list";
+import canBatch from "can-event/batch/batch";
+import stache from "can-stache";
+import Component from "can-component";
 import util from "./util";
-import tabsStache from "./tabs.stache!";
-import panelStache from "./panel.stache!";
+import tabsStache from "./tabs.stache";
+import panelStache from "./panel.stache";
+import canViewModel from "can-view-model";
 
-export var BitPanelVM = can.Map.extend({
+export var BitPanelVM = CanMap.extend({
 	active: false
 });
 
-can.Component.extend({
+Component.extend({
 	tag:"bit-panel",
 	template: panelStache,
-	scope: BitPanelVM,
+	viewModel: BitPanelVM,
 	events: {
 		inserted: function(){
-			this.element.parent().scope().addPanel( this.scope );
+      canViewModel(this.element.parentNode).addPanel(this.viewModel);
 		},
 		removed: function(){
-			this.element.parent().scope().removePanel( this.scope );
+      canViewModel(this.element.parentNode).removePanel(this.scope);
 		}
 	}
 });
 
-export var BitTabsVM = can.Map.extend({
+export var BitTabsVM = CanMap.extend({
 	// Contains a list of all panel scopes within the
 	// tabs element.
 	panels: [],
@@ -44,7 +48,7 @@ export var BitTabsVM = can.Map.extend({
 	// the panels array.
 	removePanel: function(panel){
 		var panels = this.attr("panels");
-		can.batch.start();
+		canBatch.start();
 		panels.splice(panels.indexOf(panel),1);
 		// if the panel was active, make the first item active
 		if(panel === this.attr("active")){
@@ -54,7 +58,7 @@ export var BitTabsVM = can.Map.extend({
 				this.removeAttr("active");
 			}
 		}
-		can.batch.stop();
+		canBatch.stop();
 	},
 	makeActive: function(panel){
 		this.attr("active",panel);
@@ -71,8 +75,8 @@ export var BitTabsVM = can.Map.extend({
 	}
 });
 
-can.Component.extend({
+Component.extend({
 	tag: "bit-tabs",
 	template: tabsStache,
-	scope: BitTabsVM
+	viewModel: BitTabsVM
 });

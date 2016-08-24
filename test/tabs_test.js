@@ -1,6 +1,6 @@
 import QUnit from "steal-qunit";
 import {BitPanelVM, BitTabsVM} from "bit-tabs";
-import can from "can";
+import stache from "can-stache";
 import $ from "jquery";
 import F from "funcunit";
 
@@ -16,7 +16,7 @@ QUnit.test("basics", function(){
 	equal(panelVM.attr("active"), true, "first panel added is active");
 });
 
-var template = can.stache("<bit-tabs tabs-class='nav nav-tabs'><bit-panel title='First'>Hello!</bit-panel><bit-panel title='Second'>Another</bit-panel></bit-tabs>");
+var template = stache("<bit-tabs tabs-class='nav nav-tabs'><bit-panel title='First'>Hello!</bit-panel><bit-panel title='Second'>Another</bit-panel></bit-tabs>");
 
 QUnit.module("bit-tabs component",{
 	setup: function(){
