@@ -3,7 +3,7 @@ var isCI = process.env.CI === 'true';
 
 module.exports = function (grunt) {
 
-	grunt.loadNpmTasks('steal-tools');
+	grunt.loadNpmTasks('grunt-steal');
 	grunt.loadNpmTasks('testee');
 
 	grunt.initConfig({
@@ -26,7 +26,7 @@ module.exports = function (grunt) {
 		},
 		"steal-export": {
 			dist: {
-				system: {
+				steal: {
 					config: "package.json!npm"
 				},
 				options: {
