@@ -1,2 +1,2 @@
-import "./tabs.less!";
+import "./tabs.less";
 export * from './unstyled';
