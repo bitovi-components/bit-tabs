@@ -20,7 +20,7 @@ Component.extend({
 		inserted: function(){
       canViewModel(this.element.parentNode).addPanel(this.viewModel);
 		},
-		removed: function(){
+		beforeremove: function(){
       canViewModel(this.element.parentNode).removePanel(this.scope);
 		}
 	}
