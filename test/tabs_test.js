@@ -27,6 +27,7 @@ QUnit.module("bit-tabs component",{
 QUnit.test("basics", function(){
   F("bit-tabs ul li").text(/First/, "has text");
   F("bit-tabs ul").hasClass("nav", true).hasClass("nav-tabs", true, "tabsClass gets assigned to ul");
+  F("bit-tabs ul li").hasClass("active", true, "first tab has active class");
 });
 
 QUnit.test("clicking works", function(){
