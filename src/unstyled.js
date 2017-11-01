@@ -15,7 +15,7 @@ export var BitPanelVM = CanMap.extend({
 Component.extend({
 	tag:"bit-panel",
 	view: panelStache,
-	viewModel: BitPanelVM,
+	ViewModel: BitPanelVM,
 	events: {
 		inserted: function(){
       canViewModel(this.element.parentNode).addPanel(this.viewModel);
@@ -78,5 +78,5 @@ export var BitTabsVM = CanMap.extend({
 Component.extend({
 	tag: "bit-tabs",
 	view: tabsStache,
-	viewModel: BitTabsVM
+	ViewModel: BitTabsVM
 });
