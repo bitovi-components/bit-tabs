@@ -1,6 +1,6 @@
 {
   "name": "bit-tabs",
-  "version": "1.0.3",
+  "version": "2.0.0-pre.0",
   "description": "A tabs can.Component; allows switching between one of many panels using a tabs interface.",
   "main": "dist/cjs/bit-tabs",
   "browser": {
@@ -18,6 +18,7 @@
     "test": "testee --browsers firefox test/test.html",
     "prepublish": "npm run build",
     "publish": "git push origin --tags",
+    "release:pre": "npm version prerelease && npm publish --tag pre",
     "release:patch": "npm version patch && npm publish",
     "release:minor": "npm version minor && npm publish",
     "release:major": "npm version major && npm publish"
