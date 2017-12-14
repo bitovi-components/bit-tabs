@@ -13,10 +13,10 @@ QUnit.test("basics", function(){
 	var panelVM = new BitPanelVM();
 	tabsVM.addPanel(panelVM);
 
-	equal(panelVM.attr("active"), true, "first panel added is active");
+	equal(panelVM.active, true, "first panel added is active");
 });
 
-var template = stache("<bit-tabs tabs-class='nav nav-tabs'><bit-panel title='First'>Hello!</bit-panel><bit-panel title='Second'>Another</bit-panel></bit-tabs>");
+var template = stache("<bit-tabs tabsClass:from='\"nav nav-tabs\"'><bit-panel title:from='\"First\"'>Hello!</bit-panel><bit-panel title:from='\"Second\"'>Another</bit-panel></bit-tabs>");
 
 QUnit.module("bit-tabs component",{
 	setup: function(){
