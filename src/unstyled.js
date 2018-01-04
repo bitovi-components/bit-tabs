@@ -8,6 +8,12 @@ import panelStache from "./panel.stache";
 import canViewModel from "can-view-model";
 
 export var BitPanelVM = DefineMap.extend({
+	connectedCallback(element) {
+		canViewModel(element.parentNode).addPanel(this);
+	},
+	disconnectedCallback(element) {
+		canViewModel(element.parentNode).removePanel(this);
+	},
 	title: "string",
 	active: {
 		value: false
@@ -17,15 +23,7 @@ export var BitPanelVM = DefineMap.extend({
 Component.extend({
 	tag:"bit-panel",
 	view: panelStache,
-	ViewModel: BitPanelVM,
-	events: {
-		inserted: function(){
-			canViewModel(this.element.parentNode).addPanel(this.viewModel);
-		},
-		beforeremove: function(){
-      canViewModel(this.element.parentNode).removePanel(this.viewModel);
-		}
-	}
+	ViewModel: BitPanelVM
 });
 
 export var BitTabsVM = DefineMap.extend({
