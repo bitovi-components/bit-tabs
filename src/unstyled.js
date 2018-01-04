@@ -8,6 +8,12 @@ import panelStache from "./panel.stache";
 import canViewModel from "can-view-model";
 
 export var BitPanelVM = DefineMap.extend({
+	connectedCallback(element) {
+		canViewModel(element.parentNode).addPanel(this);
+	},
+	disconnectedCallback(element) {
+		canViewModel(element.parentNode).removePanel(this);
+	},
 	title: "string",
 	active: {
 		value: false
@@ -17,15 +23,7 @@ export var BitPanelVM = DefineMap.extend({
 Component.extend({
 	tag:"bit-panel",
 	view: panelStache,
-	ViewModel: BitPanelVM,
-	events: {
-		inserted: function(){
-			canViewModel(this.element.parentNode).addPanel(this.viewModel);
-		},
-		beforeremove: function(){
-      canViewModel(this.element.parentNode).removePanel(this.viewModel);
-		}
-	}
+	ViewModel: BitPanelVM
 });
 
 export var BitTabsVM = DefineMap.extend({
@@ -33,11 +31,13 @@ export var BitTabsVM = DefineMap.extend({
 	// Contains a list of all panel scopes within the
 	// tabs element.
 	panels: {
-		value: []
+		value() {
+			return [];
+		}
 	},
 	// The tabsClass gets set up as the class attribute on the ul
 	// containing the tabs.
-	tabsClass: "string",
+	tabsClass: { type: "string", value: "" },
 	// When a `<panel>` element is inserted into the document,
 	// it calls this method to add the panel's scope to the
 	// panels array.
