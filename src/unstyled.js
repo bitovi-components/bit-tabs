@@ -16,7 +16,7 @@ export var BitPanelVM = DefineMap.extend({
 	},
 	title: "string",
 	active: {
-		value: false
+		default: false
 	}
 });
 
@@ -31,13 +31,13 @@ export var BitTabsVM = DefineMap.extend({
 	// Contains a list of all panel scopes within the
 	// tabs element.
 	panels: {
-		value() {
+		default() {
 			return [];
 		}
 	},
 	// The tabsClass gets set up as the class attribute on the ul
 	// containing the tabs.
-	tabsClass: { type: "string", value: "" },
+	tabsClass: { type: "string", default: "" },
 	// When a `<panel>` element is inserted into the document,
 	// it calls this method to add the panel's scope to the
 	// panels array.
