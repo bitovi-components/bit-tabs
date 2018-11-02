@@ -1,8 +1,8 @@
 <ul class:from="tabsClass">
   {{#panels}}
-    <li {{#if ../isActive(this)}}class='active'{{/if}}
+    <li {{#if(../isActive(this))}}class='active'{{/if}}
 			on:click="../makeActive(this)">
-		  <a href="javascript://">{{title}}</a>
+		  <a href="javascript://">{{./title}}</a>
 	</li>
   {{/panels}}
 </ul>
