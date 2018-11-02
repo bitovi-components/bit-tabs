@@ -2,7 +2,6 @@ import DefineMap from "can-define/map/map";
 import DefineList from "can-define/list/list";
 import stache from "can-stache";
 import Component from "can-component";
-import util from "./util";
 import tabsStache from "./tabs.stache";
 import panelStache from "./panel.stache";
 import canViewModel from "can-view-model";
@@ -10,9 +9,10 @@ import canViewModel from "can-view-model";
 export var BitPanelVM = DefineMap.extend({
 	connectedCallback(element) {
 		canViewModel(element.parentNode).addPanel(this);
-	},
-	disconnectedCallback(element) {
-		canViewModel(element.parentNode).removePanel(this);
+
+		return () => {
+			canViewModel(element.parentNode).removePanel(this);
+		}
 	},
 	title: "string",
 	active: {
@@ -77,7 +77,7 @@ export var BitTabsVM = DefineMap.extend({
 	}
 });
 
-Component.extend({
+export default Component.extend({
 	tag: "bit-tabs",
 	view: tabsStache,
 	ViewModel: BitTabsVM
