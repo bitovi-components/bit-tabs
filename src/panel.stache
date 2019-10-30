@@ -1,1 +1,1 @@
-{{#if(active)}}<content></content>{{/if}}
+{{#if(this.active)}}{{this.content()}}{{/if}}

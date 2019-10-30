@@ -1,9 +1,9 @@
-<ul class:from="tabsClass">
-  {{#panels}}
-    <li {{#if(../isActive(this))}}class='active'{{/if}}
-			on:click="../makeActive(this)">
-		  <a href="javascript://">{{./title}}</a>
+<ul class:from="this.tabsClass">
+  {{# for(panel of this.panels) }}
+    <li {{#if(this.isActive(panel))}}class='active'{{/if}}
+			on:click="this.makeActive(panel)">
+		  <a href="javascript://">{{panel.title}}</a>
 	</li>
-  {{/panels}}
+  {{/ for }}
 </ul>
-<content></content>
+{{bitPanels()}}
