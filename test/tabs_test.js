@@ -16,7 +16,18 @@ QUnit.test("basics", function(assert){
 	assert.equal(panelVM.active, true, "first panel added is active");
 });
 
-var template = stache("<bit-tabs tabsClass:from='\"nav nav-tabs\"'><bit-panel title:from='\"First\"'>Hello!</bit-panel><bit-panel title:from='\"Second\"'>Another</bit-panel></bit-tabs>");
+var template = stache(`
+	<bit-tabs tabsClass:raw="nav nav-tabs">
+		<can-template name="bitPanels">
+			<bit-panel title:raw="First">
+				<can-template name="content">Hello!</can-template>
+			</bit-panel>
+			<bit-panel title:raw="Second">
+				<can-template name="content">Another</can-template>
+			</bit-panel>
+		</can-template>
+	</bit-tabs>
+`);
 
 QUnit.module("bit-tabs component",{
 	beforeEach: function(){
