@@ -37,7 +37,7 @@
     "funcunit": "^3.6.1",
     "jquery": ">1.9.0",
     "steal": "^1.0.0",
-    "steal-qunit": "^1.0.0",
+    "steal-qunit": "^2.0.0",
     "steal-tools": "^1.0.0",
     "testee": "^0.8.0"
   },
