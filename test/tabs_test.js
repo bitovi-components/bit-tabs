@@ -8,7 +8,7 @@ F.attach(QUnit);
 
 QUnit.module("bit-tabs view model");
 
-QUnit.test("basics", function(assert){
+QUnit.test("basics", function(assert) {
 	var tabsVM = new BitTabs();
 	var panelVM = new BitPanel();
 	tabsVM.addPanel(panelVM);
@@ -30,18 +30,18 @@ var template = stache(`
 `);
 
 QUnit.module("bit-tabs component",{
-	beforeEach: function(){
+	beforeEach: function() {
 		$("#qunit-fixture").append(template());
 	}
 });
 
-QUnit.test("basics", function(){
+QUnit.test("basics", function(assert) {
   F("bit-tabs ul li").text(/First/, "has text");
   F("bit-tabs ul").hasClass("nav", true).hasClass("nav-tabs", true, "tabsClass gets assigned to ul");
   F("bit-tabs ul li").hasClass("active", true, "first tab has active class");
 });
 
-QUnit.test("clicking works", function(){
+QUnit.test("clicking works", function(assert) {
   F("bit-tabs li:nth(1)").click();
   F("bit-panel:nth(1)").text("Another", "Correct text shown");
 });
